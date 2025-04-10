@@ -10,7 +10,10 @@ const connectDb=require('./connectDb')
 connectDb()
 
 app.use(bodyParser.json())
-app.use(cors())
+app.use(cors({
+  origin: 'https://auth-full-stack-mern.vercel.app',
+  credentials: true,
+}));
 
 app.use('/', router)
 app.get('/', (req, res)=>{

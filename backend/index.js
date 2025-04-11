@@ -10,7 +10,7 @@ const connectDb=require('./connectDb')
 connectDb()
 
 app.use(bodyParser.json())
-app.use(express.json());
+// app.use(express.json());
 
 app.use(cors({
   origin: "*",

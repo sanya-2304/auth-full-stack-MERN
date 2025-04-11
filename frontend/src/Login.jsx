@@ -22,7 +22,7 @@ const Login = () => {
         return handleError('Enter all fields before submitting.')
       } 
       try{
-        const url='https://auth-full-stack-mern-api.vercel.app/login'
+        const url='https://auth-full-stack-mern-1.onrender.com/login'
         const response=await fetch(url,{
           method:"POST",
           headers:{

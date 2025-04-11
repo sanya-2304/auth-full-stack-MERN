@@ -18,7 +18,7 @@ const Home = () => {
 
   const fetchData = async (token) => {
     try {
-      const res = await fetch('http://localhost:5000/home', {
+      const res = await fetch('https://auth-full-stack-mern-api.vercel.app/home', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

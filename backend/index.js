@@ -10,7 +10,21 @@ const connectDb=require('./connectDb')
 connectDb()
 
 app.use(bodyParser.json())
-app.use(cors())
+const allowedOrigins = [
+  'https://auth-full-stack-mern.vercel.app',
+  'https://auth-full-stack-mern-k29hoa9qq-sanya-2304s-projects.vercel.app'
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+}));
 
 app.use('/', router)
 app.get('/', (req, res)=>{

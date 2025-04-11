@@ -18,7 +18,7 @@ app.use(cors({
 
 // Allow preflight across all routes
 app.options("*", cors({
-  origin: ["http://localhost:5173", "https://auth-full-stack-mern.vercel.app"],
+  origin: ["http://localhost:5173", "https://auth-full-stack-mern.vercel.app", "https://auth-full-stack-mern-hdccynu0g-sanya-2304s-projects.vercel.app"],
   credentials: true
 }));
 

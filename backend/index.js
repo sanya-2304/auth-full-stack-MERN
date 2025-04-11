@@ -13,8 +13,7 @@ app.use(bodyParser.json())
 // app.use(express.json());
 
 app.use(cors({
-  origin: "*",
-  credentials: true
+  origin: "*"
 }));
 
 
